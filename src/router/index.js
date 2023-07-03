@@ -12,7 +12,24 @@ const routes = [
     name: 'about',
     component: () => import('../components/AboutView.vue')
   },
-  
+  {
+    path: '/education',
+    name: 'education',
+    component: () => import('../views/EducationView.vue'),
+    props: true
+  },
+  {
+    path: '/skills',
+    name: 'skills',
+    component: () => import('../views/SkillsView.vue'),
+    props: true
+  },
+  {
+    path: '/projects',
+    name: 'skills',
+    component: () => import('../views/ProjectsView.vue'),
+    props: true
+  },
  
 
 ]

@@ -13,15 +13,19 @@
     <section class="resume-parts">
         <!--education-->
         <div class="views">
-            <div class="icon-img"></div>
+            <div class="icon-img">
+                <img src="https://i.postimg.cc/TY8BccW1/education.png" alt="edu-logo">
+            </div>
             <div>
                <h3>Education</h3>
-               <a href="">View</a>
+               <a href="../views/EducationView.vue">View</a>
             </div>
         </div>
         <!--skills-->
         <div class="views">
-            <div class="icon-img"></div>
+            <div class="icon-img">
+                <img src="https://i.postimg.cc/7LpNyK4T/soft-skills.png" alt="skills-logo">
+            </div>
             <div>
                <h3>Skills</h3>
                <a href="">View</a>
@@ -29,7 +33,9 @@
         </div>
         <!--download resume-->
         <div class="views">
-            <div class="icon-img"></div>
+            <div class="icon-img">
+                <img src="https://i.postimg.cc/fbF8Rwcy/online-resume.png" alt="res-logo">
+            </div>
             <div>
                <h3>Resume</h3>
                <a href="">Download</a>
