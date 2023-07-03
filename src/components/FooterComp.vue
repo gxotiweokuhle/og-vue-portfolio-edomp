@@ -7,7 +7,7 @@
             <router-link to="/" class="active">Projects</router-link>
             <router-link to="/" class="active">Testimonials</router-link>
             <router-link to="/" class="active">Contact</router-link>
-     </nav>
+        </nav>
         <!--social links-->
         <div>
             <div class="icon">
@@ -42,3 +42,11 @@ export default{
 
 }
 </script>
+<style>
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+</style>
