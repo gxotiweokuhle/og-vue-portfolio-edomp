@@ -17,16 +17,16 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                             <a class="nav-link" href="#">About/Resume</a>
+                             <a class="nav-link" href="../views/">About/Resume</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
+                            <a class="nav-link" href="../views/ProjectsView.vue">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Testimonials</a>
+                            <a class="nav-link" href="../views/TestimonalsView.vue">Testimonials</a>
                         </li>
                         <li class="nav-item">
-                             <a class="nav-link" href="#">Contact</a>
+                             <a class="nav-link" href="../views/ContactView.vue">Contact</a>
                         </li>
                     </ul>
         

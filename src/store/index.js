@@ -7,9 +7,15 @@ export default createStore({
   },
   
   mutations: {
-    
+    setEducation: (state, education) => {
+      state.education = education;
+    },
+    setProjects: (state, projects) => {
+      state.projects = projects;
+    },
   },
   actions: {
+    
   },
   
 })
