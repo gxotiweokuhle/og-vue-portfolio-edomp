@@ -1,5 +1,5 @@
 <template>
-    <div v-if="projects">
+    <div v-if="projects" class="projects">
         <ProjectComp v-for="project of projects"
         :key="project.id"
         :project="project"
@@ -18,9 +18,18 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch("getProjects");
+    this.$store.dispatch("fetchProjects");
   },
 
   components: { ProjectComp },
 };
 </script>
+
+<style scoped>
+.projects{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+</style>

@@ -1,20 +1,20 @@
 <template>
   <Navbar/>
   <router-view/>
-  <FooterComp/>
+
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue';
-import FooterComp from './components/FooterComp.vue';
+
 
 export default{
-  components: { Navbar, FooterComp },
+  components: { Navbar},
 }
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,5 +33,11 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+} */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 </style>

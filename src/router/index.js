@@ -12,22 +12,30 @@ const routes = [
     name: 'about',
     component: () => import('../views/AboutView.vue')
   },
+
   {
     path: '/education',
     name: 'education',
-    component: () => import('../views/EducationView.vue'),
+    component: () => import('../views/ResumeView.vue'),
     props: true
   },
   {
-    path: '/skills',
-    name: 'skills',
-    component: () => import('../views/SkillsView.vue'),
-  
+    path: '/resume',
+    name: 'resume',
+    component: () => import('../views/ResumeView.vue'),
+    props: true
   },
+
   {
     path: '/projects',
-    name: 'skills',
+    name: 'projects',
     component: () => import('../views/ProjectsView.vue'),
+    props: true
+  },
+  {
+    path: '/testimonials',
+    name: 'testimonials',
+    component: () => import('../views/TestimonialsView.vue'),
     props: true
   },
  
