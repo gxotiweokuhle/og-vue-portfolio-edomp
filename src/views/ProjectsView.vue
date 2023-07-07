@@ -8,9 +8,11 @@
     <div v-else>
         loading...
     </div>
+    <FooterComp/>
 </template>
 <script>
 import ProjectComp from "@/components/ProjectComp.vue";
+import FooterComp from '@/components/FooterComp.vue';
 export default {
   computed: {
     projects() {
@@ -21,15 +23,20 @@ export default {
     this.$store.dispatch("fetchProjects");
   },
 
-  components: { ProjectComp },
+  components: { ProjectComp, FooterComp },
 };
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 .projects{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+  background-image: url(https://i.postimg.cc/SxBrRcGT/f1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Space Mono', monospace;
 }
 </style>

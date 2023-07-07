@@ -1,33 +1,38 @@
 <template>
-    <div v-if="education">
-        <ResumeComp v-for="edu of education" 
-        :key="edu.id"
-        :edu="edu"
-        />
+  <section id="resume">
+    <div class="row justify-content-center" id="blocks">
+      <EduComp class="col-lg-6 col-md-6 col-12"/>
+      <SkillsComp class="col-lg-6 col-md-6 col-12 my-auto"/> 
+  </div>
+   <div class="" id="block">
+     <LangComp/>
     </div>
-    
-   
-    <div v-else>
-        Loading...
-    </div>
+  </section>
+  <FooterComp/>
 </template>
 <script>
-import ResumeComp from "@/components/ResumeComp.vue";
+import EduComp from "@/components/EduComp.vue";
+import SkillsComp from "@/components/SkillsComp.vue"
+import LangComp from "@/components/LangComp.vue";
+import FooterComp from '@/components/FooterComp.vue';
 export default {
-  computed: {
-    education() {
-      return this.$store.state.education;
-    },
-    education2(){
-      return this.$store.state.education2;
-    },
-  },
-  mounted() {
-    this.$store.dispatch("fetchEducation");
 
 
-  },
-
-  components: { ResumeComp },
+  components: { EduComp, SkillsComp, LangComp, FooterComp },
 };
 </script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+  #resume{
+    background-image: url(https://i.postimg.cc/SxBrRcGT/f1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Space Mono', monospace;
+
+  }
+
+ 
+  
+</style>

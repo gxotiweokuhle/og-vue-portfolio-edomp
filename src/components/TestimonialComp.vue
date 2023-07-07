@@ -1,5 +1,5 @@
 <template>
-  <div id="carouselExampleCaptions" class="carousel slide">
+  <div id="carouselExampleCaptions" class="carousel">
     <div class="carousel-indicators">
       <button
         v-for="test in testimonials" :key="test.id"
@@ -19,17 +19,19 @@
         :class="{ active: testimonials.indexOf(test) == 0 }"
       >
         <routerlink :to="{ name: 'test', params: { id: test.id } }">
-          <img
-            :src="test.image_url"
-            class="d-block w-100"
+          <div class="d-flex justify-content-center mt-4" id="slides">
+            <img :src="test.image_url"
+             class="d-block custom img-fluid"
             :alt="test.image_url"
           />
-          <div class="carousel-caption d-none d-md-block">
+          </div>
+          <div class="carousel-caption d-md-block text-white">
             <h5>{{ test.name }}</h5>
             <h5>{{ test.role }}</h5>
             <p>{{ test.message }}</p>
           </div>
         </routerlink>
+        
       </div>
     </div>
     <button
@@ -66,9 +68,29 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 .d-block {
   min-width: 270px;
   height: 380px;
 }
+.custom{
+  width:200px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+#slides{
+  height: 500px;
+}
+  .carousel{
+    font-family: 'Space Mono', monospace;
+        background-image: url(https://i.postimg.cc/SxBrRcGT/f1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+  }
+  button{
+    background-color: #AB82AD;
+  }
 </style>

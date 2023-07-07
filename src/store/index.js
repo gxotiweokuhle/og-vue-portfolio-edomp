@@ -5,13 +5,12 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     education: null,
-    edu: null,
-    education2: null,
-    item: null,
     testimonials: null,
     test: null,
     projects:null,
     project:null,
+    skills: null,
+    Languages: null,
   },
   
   mutations: {
@@ -32,21 +31,43 @@ export default createStore({
     },
     setProject: (state, project) =>{
       state.project = project;
-    }
+    },
+    setSkills: (state, skills) => {
+      state.skills = skills;
+    },
+    setLanguages: (state, Languages) => {
+      state.Languages = Languages;
+    },
+
   },
   actions: {
     fetchEducation: async (context) => {
       fetch('https://gxotiweokuhle.github.io/data/portfolio.json')
       
       .then((res) => res.json())
-      .then((data) => context.commit('setEducation', data.education))
+      .then((data) => {
+        let {education} = data
+        context.commit('setEducation', education)
+      })
     }, 
-    fetchEdu: async (context, id) => {
-      fetch('https://gxotiweokuhle.github.io/data/portfolio.json' + id)
+    fetchSkills: async (context) => {
+      fetch('https://gxotiweokuhle.github.io/data/portfolio.json')
+      
       .then((res) => res.json())
-      .then((edu) => context.commit('setEdu', edu))
+      .then((data) => {
+        let {skills} = data
+        context.commit('setSkills', skills)
+      })
     },
-   
+    fetchLanguages: async (context) => {
+      fetch('https://gxotiweokuhle.github.io/data/portfolio.json')
+      
+      .then((res) => res.json())
+      .then((data) => {
+        let {Languages} = data
+        context.commit('setLanguages', Languages)
+      })
+    },
     fetchTestimonials: async (context) => {
       fetch('https://gxotiweokuhle.github.io/data/portfolio.json')
       .then((res) => res.json())
